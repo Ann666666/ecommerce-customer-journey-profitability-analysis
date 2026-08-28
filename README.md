@@ -131,7 +131,7 @@ e-commerce_sql_practice/
 ├── visualization/
 │   ├── screenshots/                # portfolio dashboard images
 │   └── tableau/                    # final Tableau workbooks
-└── archive_temp/                   # retained duplicates and temporary artifacts
+└── archive_temp/                   # local-only archived artifacts; excluded from Git
 ```
 
 ## Tools
