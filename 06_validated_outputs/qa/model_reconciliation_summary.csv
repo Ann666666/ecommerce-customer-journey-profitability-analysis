@@ -1,0 +1,13 @@
+check_group,check_name,expected_value,actual_value,status,interpretation
+category_model,category_net_revenue_reconciles,4493217.4700,4493217.4700,PASS,Category net revenue must reconcile to the canonical order model.
+cohort_model,cohort_customers_reconcile,16268.0000,16268.0000,PASS,First-purchase cohorts cover every purchasing customer once.
+customer_model,customer_counts_reconcile,16268.0000,16268.0000,PASS,Customer-value model includes every purchasing customer exactly once.
+customer_model,rfm_net_revenue_reconciles,4493217.4700,4493217.4700,PASS,RFM monetary uses net customer revenue and must reconcile globally.
+funnel_model,funnel_sessions_reconcile,120000.0000,120000.0000,PASS,Funnel flag view preserves one row per session.
+item_model,item_cost_reconciles,3122310.5600,3122310.5600,PASS,Item costs must reconcile after repeated order-product rows are aggregated.
+item_model,item_net_allocation_reconciles,4493217.4700,4493217.4700,PASS,Allocated item net revenue must return to total order net revenue.
+item_model,item_net_profit_reconciles,1370906.9100,1370906.9100,PASS,Allocated item profit must return to canonical order-level profit.
+order_model,net_revenue_reconciles,4493217.4700,4493217.4700,PASS,Order-model net revenue must equal orders.total_usd.
+order_model,order_id_is_unique,33580.0000,33580.0000,PASS,order_id must remain unique after item aggregation and joins.
+order_model,order_rows_reconcile,33580.0000,33580.0000,PASS,Canonical order model must contain exactly one row per source order.
+order_model,units_reconcile,77106.0000,77106.0000,PASS,"Units are summed from quantity, not source row count."

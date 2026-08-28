@@ -1,0 +1,3 @@
+order_year,orders,units,net_revenue,net_profit,aov,net_margin,order_growth,net_revenue_growth,net_profit_growth,aov_growth
+2024,4760,10892,623551.69,191011.19,130.998254,0.306328,NULL,NULL,NULL,NULL
+2025,4878,11155,662315.27,200888.67,135.775988,0.303313,0.0248,0.062166,0.051712,0.0364717380

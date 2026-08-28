@@ -1,0 +1,49 @@
+check_group,check_name,result_value,status,interpretation
+duplicate_like,duplicate_order_product_groups,110,WARNING,Canonical item model aggregates repeated order-product rows rather than deleting them.
+duplicate_like,exact_duplicate_order_item_extra_rows,73,WARNING,Do not delete automatically; source lacks order_item_id and totals reconcile.
+foreign_key,orphan_events_product_nonnull,0,PASS,Non-null event product_ids absent from products.
+foreign_key,orphan_events_session,0,PASS,Events whose session_id is absent from sessions.
+foreign_key,orphan_order_items_order,0,PASS,Order items whose order_id is absent from orders.
+foreign_key,orphan_order_items_product,0,PASS,Order items whose product_id is absent from products.
+foreign_key,orphan_orders_customer,0,PASS,Orders whose customer_id is absent from customers.
+foreign_key,orphan_reviews_order,0,PASS,Reviews whose order_id is absent from orders.
+foreign_key,orphan_reviews_product,0,PASS,Reviews whose product_id is absent from products.
+foreign_key,orphan_sessions_customer,0,PASS,Sessions whose customer_id is absent from customers.
+join_cardinality,max_source_lines_per_order,7,PASS,Expected one-to-many relationship; aggregate items before order-level metrics.
+join_cardinality,orders_without_items,0,PASS,Every order should have at least one order-item row.
+join_cardinality,reviews_product_not_in_order,0,PASS,Reviewed product should appear in the reviewed order.
+null_check,customers_required_null_rows,0,PASS,Rows with a null in a required customer field.
+null_check,events_required_null_rows,0,PASS,Rows with a null in a required event field; event product attributes are stage-dependent and optional.
+null_check,order_items_required_null_rows,0,PASS,Rows with a null in a required order-item field.
+null_check,orders_required_null_rows,0,PASS,Rows with a null in a required order field.
+null_check,products_required_null_rows,0,PASS,Rows with a null in a required product field.
+null_check,reviews_required_null_rows,0,PASS,Rows with a null in a required review field.
+null_check,sessions_required_null_rows,0,PASS,Rows with a null in a required session field.
+primary_key,duplicate_customer_ids,0,PASS,customer_id should be unique and non-null.
+primary_key,duplicate_event_ids,0,PASS,event_id should be unique and non-null.
+primary_key,duplicate_order_ids,0,PASS,order_id should be unique and non-null.
+primary_key,duplicate_product_ids,0,PASS,product_id should be unique and non-null.
+primary_key,duplicate_review_ids,0,PASS,review_id should be unique and non-null.
+primary_key,duplicate_session_ids,0,PASS,session_id should be unique and non-null.
+reconciliation,orders_with_discount_total_mismatch,0,PASS,Rounded subtotal less stated discount percentage should equal order total within 0.01 USD.
+reconciliation,orders_with_item_subtotal_mismatch,0,PASS,Order-item line totals should reconcile to order subtotal within 0.01 USD.
+row_count,customers_rows,20000,PASS,Source row count; expected from the loaded file.
+row_count,events_rows,760958,PASS,Source row count.
+row_count,order_items_rows,59163,PASS,Source row count.
+row_count,orders_rows,33580,PASS,Source row count.
+row_count,products_rows,1197,PASS,Source row count.
+row_count,reviews_rows,10780,PASS,Source row count.
+row_count,sessions_rows,120000,PASS,Source row count.
+timestamp_anomaly,checkout_before_add_to_cart_sessions,118,LIMITATION,Sessions whose first checkout timestamp precedes first add-to-cart timestamp.
+timestamp_anomaly,orders_before_signup,16923,LIMITATION,Synthetic-data chronology limitation; first-purchase cohort therefore uses orders only.
+timestamp_anomaly,reviews_before_order,5482,LIMITATION,Synthetic-data chronology limitation; review timing is out of scope.
+timestamp_anomaly,sessions_before_signup,60411,LIMITATION,Synthetic-data chronology limitation; do not use signup_date for lifecycle inference.
+validity,invalid_customer_age_rows,0,PASS,Age must be greater than zero and no more than 120.
+validity,invalid_order_item_rows,0,PASS,Order-item quantity must be positive and monetary values non-negative.
+validity,invalid_order_value_rows,0,PASS,Order values must be non-negative and net total cannot exceed subtotal.
+validity,invalid_product_value_rows,0,PASS,Product price and cost must be non-negative.
+validity,invalid_review_rating_rows,0,PASS,Review rating must be between 1 and 5.
+validity,order_item_extension_mismatch_rows,0,PASS,Line total should equal unit price multiplied by quantity within 0.01 USD.
+validity,product_margin_mismatch_rows,0,PASS,Stored product margin should equal price less cost within 0.01 USD.
+validity,unexpected_discount_values,0,PASS,"Expected synthetic discount levels are 0, 5, 10, 15, and 20 percent."
+validity,unexpected_event_type_rows,0,PASS,Event type should belong to the documented customer-journey stages.

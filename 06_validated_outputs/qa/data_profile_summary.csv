@@ -1,0 +1,9 @@
+profile_metric,min_value,max_value,avg_value,population_rows,interpretation
+customer_age,18.0000,75.0000,46.4926,20000,Profile only; values are not removed based on range alone.
+events_per_session,1.0000,17.0000,6.3413,120000,Session event-count distribution; no rows are removed as outliers.
+order_item_quantity,1.0000,4.0000,1.3033,59163,Source-line quantity distribution.
+order_subtotal_usd,3.5000,3141.6600,144.0026,33580,Gross basket value before discount.
+order_total_usd,2.8000,2984.5800,133.8064,33580,Net order value after discount.
+product_cost_usd,2.2100,446.1000,77.6265,1197,Catalog product-cost distribution.
+product_price_usd,3.5000,596.6200,119.9352,1197,Catalog price distribution.
+source_lines_per_order,1.0000,7.0000,1.7619,33580,Use this profile to confirm the one-to-many orders-to-items relationship.

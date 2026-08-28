@@ -1,0 +1,33 @@
+# macOS and system metadata
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Office and Tableau locks/recovery files
+~$*
+*.lock
+*.lck
+*.twbr
+
+# Python cache and local environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Editor and temporary files
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+*.tmp
+*.temp
+*.bak
+*.inspect.ndjson
+
+# Local archive retained for reference; do not publish
+archive_temp/

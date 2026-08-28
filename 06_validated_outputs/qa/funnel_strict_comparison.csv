@@ -1,0 +1,5 @@
+stage,event_presence_sessions,strict_sequence_sessions,excluded_anomaly_sessions
+View,120000,120000,0
+Add to Cart,81518,81518,0
+Checkout,44909,44791,118
+Purchase,33580,33497,83

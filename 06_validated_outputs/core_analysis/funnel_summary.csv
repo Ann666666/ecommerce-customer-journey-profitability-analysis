@@ -1,0 +1,5 @@
+stage_order,stage,sessions,step_conversion,step_drop_off,overall_conversion
+1,View,120000,1.0000,0.0000,1.0000
+2,Add to Cart,81518,0.6793,0.3207,0.6793
+3,Checkout,44909,0.5509,0.4491,0.3742
+4,Purchase,33580,0.7477,0.2523,0.2798
