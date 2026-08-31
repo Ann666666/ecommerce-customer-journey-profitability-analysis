@@ -31,3 +31,8 @@ venv/
 
 # Local archive retained for reference; do not publish
 archive_temp/
+
+# Earlier exploratory versions retained locally; do not publish
+02_original_sql/
+03_original_outputs/
+04_original_visualization/

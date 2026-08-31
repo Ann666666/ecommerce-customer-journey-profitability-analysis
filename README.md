@@ -4,7 +4,7 @@
 
 This portfolio project analyzes a synthetic e-commerce customer journey from browsing through purchase, with a focus on conversion, repeat-buyer value, discount economics, and category profitability. The project also demonstrates why trustworthy business reporting depends on controlling analytical grain, defining metrics consistently, and reconciling results before presenting them in a dashboard.
 
-The analysis is descriptive, not causal. Original exploratory work is preserved separately from the validated SQL, outputs, and Tableau dashboards.
+The analysis is descriptive, not causal. Earlier exploratory versions are retained locally; this repository presents the validated analysis used for the final portfolio.
 
 ## Business Questions
 
@@ -114,9 +114,6 @@ e-commerce_sql_practice/
 ├── README.md
 ├── .gitignore
 ├── 01_raw_data/                    # seven synthetic source CSVs
-├── 02_original_sql/                # preserved exploratory SQL
-├── 03_original_outputs/            # preserved exploratory exports
-├── 04_original_visualization/      # preserved exploratory Tableau workbook
 ├── 05_validated_sql/
 │   ├── setup/                      # schema creation and data loading
 │   └── analysis/                   # models, analytical modules, and QA
